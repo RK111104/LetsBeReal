@@ -1,0 +1,10 @@
+﻿@page "/product/{id}"
+
+<h3>Product Id @Id, press the link to know more</h3>
+
+<a href="https://www.amazon.sg/Acer-AN515-55-53E5-i5-10300H-GeForce-Keyboard/dp/B092YHJGMN">Amazon</a>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+}
