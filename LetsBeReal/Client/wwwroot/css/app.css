@@ -1,8 +1,11 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: blanchedalmond;
+    font-family: 'Gill Sans';
+    
 }
+
 
 a, .btn-link {
     color: #0366d6;
@@ -34,12 +37,18 @@ a, .btn-link {
     text-decoration: line-through;
 }
 
+
 .media-img {
     max-height: 180px;
     max-width: 180px;
     border-radius: 5px;
     margin-bottom: 8px;
     transition: transform .2s;
+}
+
+.description {
+    font-family: 'Agency FB';
+    color:burlywood;
 }
 
 .media-img:hover {
