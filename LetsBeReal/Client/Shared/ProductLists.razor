@@ -1,45 +1,136 @@
 ﻿<ul class="list-unstyled">
     @foreach (var product in products)
-            {
-                <li class ="media my-3">
-                    <div class="media-img-wrapper mr-2">
-                        <a href="/product/@product.Id">
-                            <img class="media-img" src="@product.Image" alt="@product.Title" />
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <a href="/product/@product.Id">
-                            <h4 class="mb-0">@product.Title</h4>
-                        </a>
-                        <p>@product.Description</p>
-                        @if (product.OriginalPrice> product.Price)
-                          {
-                                <h6 class="text-muted original-price">$@product.OriginalPrice</h6>
-                          }
-                        <h5 class="price">
-                            $@product.Price
-                        </h5>
-                    </div>
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="/product/@product.Id">
+                    <img class="media-img" src="@product.Image" alt="@product.Title" />
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="/product/@product.Id">
+                    <h4 class="mb-0">@product.Title</h4>
+                </a>
+                <p>@product.Description</p>
+                @if (product.OriginalPrice > product.Price)
+                {
+                    <h6 class="text-muted original-price">$@product.OriginalPrice</h6>
+                }
+                <h5 class="price">
+                    $@product.Price
+                </h5>
+            </div>
 
-                </li>
-            }
+        </li>
+    }
 </ul>
 
 
 
 @code {
-    List<Product> products = new List<Product>
-    {
+    List<Product> products = new List<Product> {
+
         new Product
         {
             Id = 1,
             CategoryId = 1,
             Title = "Acer Nitro 5",
-            Description = "The best Acer Gaming Laptop",
+            Description = "The best Acer Gaming Laptop to have an immersive gameplay experience in a Laptop.",
             Image = "nitro.jpg",
             Price = 2100,
             OriginalPrice = 3200,
         },
+        new Product
+        {
+            Id = 2,
+            CategoryId = 2,
+            Title = "NZXT Gaming PC",
+            Description = "NZXT is a top Gaming PC company/brand and their PCs are incredible to play games smoothly, roughly about an average of 100 FPS!",
+            Image = "NZXT.png",
+            Price = 1555,
+            OriginalPrice = 1899,
+        },
+        new Product
+        {
+            Id = 3,
+            CategoryId = 3,
+            Title = "Acer Gaming PC",
+            Description = "Acer gaming PCs are incredible to play high end games smoothly.",
+            Image = "acer2.jpg",
+            Price = 1785,
+            OriginalPrice = 2200,
+        },
+        new Product
+        {
+            Id = 4,
+            CategoryId = 4,
+            Title = "HP Gaming PC",
+            Description = "HP is a top Gaming PC company/brand and their PCs are packed with good specs!",
+            Image = "hp.jpg",
+            Price = 915,
+            OriginalPrice = 1199,
+        },
+        new Product
+        {
+            Id = 5,
+            CategoryId = 5,
+            Title = "PS5",
+            Description = "Playstation is the company that released their recent PS5 and it is their top console to play immersive games as of now.",
+            Image = "ps5.jpg",
+            Price = 999,
+            OriginalPrice = 1200,
+        },
+        new Product
+        {
+            Id = 6,
+            CategoryId = 6,
+            Title = "PS4",
+            Description = "Playstation is the company that released PS4 years back, price is a bit cheaper and you are still able to play new console games.",
+            Image = "ps4.jpg",
+            Price = 695,
+            OriginalPrice = 882,
+        },
+        new Product
+        {
+            Id = 7,
+            CategoryId = 7,
+            Title = "Dell Alienware Gaming Monitor",
+            Description = "Dell's Immersive Alienware Gaming Monitor, comes with 1440p and this perfect gaming monitor makes your gaming expreince much better.",
+            Image = "monitor1.jpg",
+            Price = 895,
+            OriginalPrice = 1099,
+        },
+        new Product
+        {
+            Id = 8,
+            CategoryId = 8,
+            Title = "XBOX Series X",
+            Description = "Xbox Series X is a XBOX console that is able to render games at 4K resolution at about 60 fps and its able to also render 8K resolution at about 120 fps, fantastic to play games with this console!",
+            Image = "xbox1.jpg",
+            Price = 635,
+            OriginalPrice = 709,
+        },
+        new Product
+        {
+            Id = 9,
+            CategoryId = 9,
+            Title = "XBOX S",
+            Description = "Xbox Series S is another XBOX console but its packed with great specs to download and play games faster reason is because it comes with SSD. Furthermore, you are also able to pre-install games too.",
+            Image = "xbox2.jpg",
+            Price = 385,
+            OriginalPrice = 469,
+        },
+        new Product
+        {
+            Id = 10,
+            CategoryId = 10,
+            Title = "Nintendo Switch",
+            Description = "Nintendo Switch is a hybrid, portable video-game console which consists a dock, two Joy-Con controllers and a console unit. Fun with playing with friends and check out their famous online game, Super Smash Bros!",
+            Image = "nin.jpg",
+            Price = 390,
+            OriginalPrice = 479,
+        },
+
     };
 
 }
