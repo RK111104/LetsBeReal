@@ -1,0 +1,36 @@
+﻿@page "/update/{id}"
+
+<h3>News Id @Id, press the link to know more</h3>
+<ul>
+    <li>
+        <a href="https://store.steampowered.com/app/1321680/Hello_Neighbor_2/">Hello Neighbour 2 (ID 1)</a>
+    </li>
+    <li>
+        <a href="https://store.steampowered.com/app/368260/Marvels_Midnight_Suns/">Marvel Midnight Suns (ID 2)</a>
+    </li>
+    <li>
+        <a href="https://store.steampowered.com/app/1774580/STAR_WARS_Jedi_Survivor/">Star Wars: Jedi Survivor (ID 3)</a>
+    </li>
+    <li>
+        <a href="https://store.steampowered.com/app/990080/Hogwarts_Legacy/">Hogwarts Legacy (ID 4)</a>
+    </li>
+    <li>
+        <a href="https://store.steampowered.com/app/1205520/Pentiment/">Pentiment (ID 5)</a>
+    </li>
+    <li>
+        <a href="https://store.steampowered.com/app/1583230/High_On_Life/">High On Life (ID 6)</a>
+    </li>
+    <li>
+        <a href="https://store.steampowered.com/app/1210320/Potion_Craft_Alchemist_Simulator/">Potion Craft (ID 7)</a>
+    </li>
+    <li>
+        <a href="https://store.steampowered.com/app/1675900/Warlander/"> Warlander (ID 8)</a>
+    </li>
+</ul>
+
+<BackToList Target="news" />
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+}
