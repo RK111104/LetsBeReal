@@ -1,8 +1,44 @@
-﻿@page "/product/{id}"
+@page "/product/{id}"
 
 <h3>Product Id @Id, press the link to know more</h3>
 
-<a href="https://www.amazon.sg/Acer-AN515-55-53E5-i5-10300H-GeForce-Keyboard/dp/B092YHJGMN">Amazon</a>
+<ul>
+    <li>
+        <a href="https://www.amazon.sg/Acer-AN515-55-53E5-i5-10300H-GeForce-Keyboard/dp/B092YHJGMN">Acer Laptop (ID 1)</a>
+    </li>
+    <li>
+        <a href="https://nzxt.com/product/exclusive-3080-h710-pc">NZXT (ID 2)</a>
+    </li>
+    <li>
+        <a href="https://store.acer.com/en-sg/desktops-pc/gaming/nitro-series">Acer (ID 3)</a>
+    </li>
+    <li>
+        <a href="https://www.hp.com/us-en/shop/mdp/hp-pavilion-gaming-desktop-3074457345617278175-1">HP (ID 4)</a>
+    </li>
+    <li>
+        <a href="https://store.sony.com.sg/collections/playstation/?locale=en">PS5 (ID 5)</a>
+    </li>
+    <li>
+        <a href="https://iprice.sg/compare/sony-playstation-4/">PS4 (ID 6)</a>
+    </li>
+    <li>
+        <a href="https://www.dell.com/en-sg/shop/alienware-27-gaming-monitor-aw2723df/apd/210-bfox/monitors-monitor-accessories?gacd=9677453-8023-5761040-272726311-0&dgc=ST&gclid=Cj0KCQiA_bieBhDSARIsADU4zLc224Xo1Or821ibpdCOQiAG7uzKlnAZ--QPNpp1yRXmV-EsE81Wo3oaAob-EALw_wcB&gclsrc=aw.ds">Dell Monitor (ID 7)</a>
+    </li>
+    <li>
+        <a href="https://www.microsoft.com/en-sg/d/xbox-series-x/8wj714n3rbtl?activetab=pivot:overviewtab">Xbox Series X (ID 8)</a>
+    </li>
+    <li>
+        <a href="https://www.microsoft.com/en-sg/d/xbox-series-s/942j774tp9jn?activetab=pivot:overviewtab">Xbox Series (ID 9)</a>
+    </li>
+    <li>
+        <a href="https://www.amazon.sg/Nintendo-Switch-Console-Joycon-color/dp/B098RKWHHZ/ref=asc_df_B098RKWHHZ/?tag=googleshoppin-22&linkCode=df0&hvadid=426852206552&hvpos=&hvnetw=g&hvrand=15735166697648174178&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062549&hvtargid=pla-1392422079323&th=1">Nintendo Switch (ID 10)</a>
+    </li>
+</ul>
+
+<BackToList Target="techStore" />
+
+
+
 
 @code {
     [Parameter]
