@@ -1,0 +1,103 @@
+﻿<ul class="list-unstyled">
+    @foreach (var update in updates)
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="/update/@update.Id">
+                    <img class="media-img" src="@update.image" alt="@update.title" />
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="/update/@update.Id">
+                    <h4 class="mb-0">@update.title</h4>
+                </a>
+                <p>@update.description</p>
+
+
+                <h5 class="price">
+                    $@update.price
+                </h5>
+            </div>
+
+        </li>
+    }
+</ul>
+
+@code {
+    List<Update> updates = new List<Update>
+{
+        new Update
+        {
+            Id = 1,
+            categoryId = 1,
+            title = "Hello Neighbour 2",
+            description = "Hello Neighbour 2 is a stealth horror game, you are journalist who will try to discover the secrets of your creepy neighbour!",
+            image = "H2.jpg",
+            price = 57.75,
+        },
+        new Update
+        {
+            Id = 2,
+            categoryId = 2,
+            title = "Marvel Midnight Suns",
+            description = "It is a tactical role-playing game and features comic book characters like X-men, Avengers, Sons, and Runaways.",
+            image = "Marvel.jpg",
+            price = 84.90,
+        },
+         new Update
+        {
+            Id = 3,
+            categoryId = 3,
+            title = "Star Wars Jedi: Survivor",
+            description = "Is an upcoming adventure game. Packed with large open-world landscape and epic lightsaber battels with different aliens and bosses.",
+            image = "star.jpg",
+            price = 84.90,
+        },
+         new Update
+        {
+            Id = 4,
+            categoryId = 4,
+            title = "Hogwarts Legacy",
+            description = "Open world action game and its RPG. Its set at 1800 and you are student who gets get the opportunity to become a witch or wizard.",
+            image = "hogwart.jpg",
+            price = 79.90,
+        },
+          new Update
+        {
+            Id = 5,
+            categoryId = 5,
+            title = "Pentiment",
+            description = "Pentiment is a role playing, narrative adventure game. As Andreas Maler you will get to explore the town and speak to the locals, however you will investigate a murder mystery later in the game.",
+            image = "pentiment.jpg",
+            price = 29.90,
+        },
+          new Update
+        {
+            Id = 6,
+            categoryId = 6,
+            title = "Potion Craft",
+            description = "It's a alchemist simulator, where you can interact with the tools and brew new potions, it is possible to invent new recipes and attract customer. However, the whole town will be counting on you.",
+            image = "potion.jpg",
+            price = 14.50,
+        },
+          new Update
+        {
+            Id = 7,
+            categoryId = 7,
+            title = "High On Life",
+            description = "It's a action aventure and comedic first-person shooter. The humanity is threatened by aliens but the choice is left to you whether to rescue them.",
+            image = "life.jpg",
+            price = 49.00,
+        },
+          new Update
+        {
+            Id = 8,
+            categoryId = 8,
+            title = "Warlander",
+            description = "Warlander is a roguelike action packed game, third person and online-multiplayer. Inspired mainly from the medieval times and it's a free game!",
+            image = "war.jpg",
+            price = 0,
+        },
+    };
+}
+
