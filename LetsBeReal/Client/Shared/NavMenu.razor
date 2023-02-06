@@ -1,4 +1,12 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+
+
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">LetsBeReal</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -14,11 +22,14 @@
                         <span class="oi oi-person" aria-hidden="true"></span> Hello, @context.User.Identity.Name!
                     </NavLink>
                 </li>
-                <li class="nav-item px-3">
+                @*<li class="nav-item px-3">
                     <NavLink class="nav-link" href="authentication/logout" Match="NavLinkMatch.All">
                         <span class="oi oi-account-logout" aria-hidden="true"></span> Log Out
                     </NavLink>
-                </li>
+                </li>*@
+                <NavLink class="nav-link" href="#" @onclick="BeginSignOut" Match="NavLinkMatch.All">
+                    <span class="oi oi-account-logout" aria-hidden="true"></span>Log out
+                </NavLink>
             </Authorized>
             <NotAuthorized>
                 <li class="nav-item px-3">
@@ -38,28 +49,43 @@
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </li>
-        <li class="nav-item px-3">
+        @*<li class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
                 <span class="oi oi-plus" aria-hidden="true"></span> Counter
             </NavLink>
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                <span class="oi oi-plus" aria-hidden="true"></span> Weather
+            </NavLink>
+        </li>*@
+        @*<li class="nav-item px-3">
+            <NavLink class="nav-link" href="genres">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Genre Page
+            </NavLink>
+        </li>*@
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="games">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Game Page
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="reviewpage">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Review Page
+            <NavLink class="nav-link" href="reviews">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Reviews
             </NavLink>
         </li>
+        @*<li class="nav-item px-3">
+            <NavLink class="nav-link" href="users">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> User Page
+            </NavLink>
+        </li>*@
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="rankpage">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> User Rank Page
             </NavLink>
         </li>
         <li class="nav-item px-3">
-            <NavLink class="nav-link" href="newspage">
+            <NavLink class="nav-link" href="news">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> News Page
             </NavLink>
         </li>
@@ -79,5 +105,11 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
     }
 }
